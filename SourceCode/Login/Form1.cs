@@ -47,10 +47,34 @@ namespace Login
                 ma = (string)com.Parameters["@ma"].Value;
                 string result = $"Loại tài khoản: {account_type}, Mã = {ma}";
                 MessageBox.Show(result, "Kết quả");
+                
+                if(account_type == "KH")
+                {
+                    Form formKhachHang = new KhachHang.Menu(ma);
+                    this.Hide();
+                    formKhachHang.ShowDialog();
+                    this.Close();
+                }
+                else if(account_type == "NV")
+                {
+
+                }
+                else if (account_type == "QL")
+                {
+
+                }
+                else if (account_type == "QT")
+                {
+
+                }
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
+            }
+            finally
+            {
+                cnn.Close();
             }
         }
     }
