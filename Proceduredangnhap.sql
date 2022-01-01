@@ -1,38 +1,50 @@
 ﻿USE CUA_HANG_HOA
 --Procedure dùng để đăng nhập
-CREATE PROCEDURE dang_nhap @tai_khoan VARCHAR(20), @mat_khau VARCHAR(50)
+
+CREATE PROCEDURE dang_nhap (@tai_khoan VARCHAR(20), @mat_khau VARCHAR(50), @loai_tk CHAR(2) OUTPUT, @ma CHAR(10) OUTPUT)
 AS
 BEGIN TRANSACTION
-	DECLARE @loai_tk CHAR(2);
 	SET @loai_tk = NULL;
+	SET @ma = NULL;
 	--Lấy ra loại tài khoản
 	SET @loai_tk = (SELECT TOP 1 tk.LOAI_TK
 					FROM TAI_KHOAN tk
 					WHERE tk.TEN_TK = @tai_khoan AND tk.MAT_KHAU = @mat_khau AND tk.TRANG_THAI_KHOA = 0)
 	IF @loai_tk IS NOT NULL
 		BEGIN
-			
 			IF @loai_tk = 'KH'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', kh.MA_KH AS 'ma' FROM KHACH_HANG kh WHERE kh.TEN_TK_KH = @tai_khoan;
+					SELECT @ma = (SELECT TOP 1 kh.MA_KH FROM KHACH_HANG kh WHERE kh.TEN_TK_KH = @tai_khoan);
 					COMMIT TRAN;
 					RETURN;
 				END
 			ELSE IF @loai_tk = 'QT'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', qt.MA_QT AS 'ma' FROM QUAN_TRI qt WHERE qt.TEN_TK_QT = @tai_khoan;
+					SELECT @ma = (SELECT TOP 1 qt.MA_QT FROM QUAN_TRI qt WHERE qt.TEN_TK_QT = @tai_khoan);
 					COMMIT TRAN;
 					RETURN;
 				END
 			ELSE IF @loai_tk = 'QL'
 				BEGIN
-					SELECT @loai_tk AS 'loai_tk', ql.MA_QL AS 'ma' FROM QUAN_LI ql WHERE ql.TEN_TK_QL = @tai_khoan;
+					SELECT @ma = (SELECT TOP 1 ql.MA_QL FROM QUAN_LI ql WHERE ql.TEN_TK_QL = @tai_khoan);
+					COMMIT TRAN;
+					RETURN
+				END
+			ELSE IF @loai_tk = 'NV'
+				BEGIN
+					SELECT @ma = (SELECT TOP 1 nv.MA_NV AS 'ma' FROM NHAN_VIEN nv WHERE nv.TEN_TK_NV = @tai_khoan);
 					COMMIT TRAN;
 					RETURN
 				END
 		END
 COMMIT TRANSACTION
 GO
+DECLARE @loai_tk as CHAR(2), @ma as CHAR(10)
+EXEC dang_nhap @tai_khoan = 'TK001', @mat_khau = '12345', @loai_tk = @loai_tk OUTPUT, @ma = @ma OUTPUT
+SELECT @loai_tk, @ma
+GO
+
+
 
 --Cấp quyền cho tài khoản đăng nhập
 GO
