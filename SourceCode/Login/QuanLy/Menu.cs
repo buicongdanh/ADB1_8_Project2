@@ -12,9 +12,27 @@ namespace Login.QuanLy
 {
     public partial class Menu : Form
     {
+        private string MaQL;
+
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public Menu(string ma)
+        {
+            this.MaQL = ma;
+            InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

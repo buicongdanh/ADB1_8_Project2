@@ -12,9 +12,22 @@ namespace Login.NhanSu
 {
     public partial class Menu : Form
     {
+        private string ma;
+
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public Menu(string ma)
+        {
+            this.ma = ma;
+            InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

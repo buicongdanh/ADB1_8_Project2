@@ -12,9 +12,45 @@ namespace Login.QuanTri
 {
     public partial class Menu : Form
     {
+        private string MaQT;
+
         public Menu()
         {
             InitializeComponent();
+        }
+
+        public Menu(string ma)
+        {
+            this.MaQT = ma;
+            InitializeComponent();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmQT_XemPN = new QuanTri.Xem_PhieuNhap(MaQT);
+            frmQT_XemPN.ShowDialog();
+            this.Show();
         }
     }
 }
