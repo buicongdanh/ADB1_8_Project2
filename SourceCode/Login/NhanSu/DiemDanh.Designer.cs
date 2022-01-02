@@ -41,9 +41,11 @@ namespace Login.NhanSu
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(564, 387);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.button1.Location = new System.Drawing.Point(554, 387);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 31);
+            this.button1.Size = new System.Drawing.Size(124, 31);
             this.button1.TabIndex = 0;
             this.button1.Text = "Điểm danh";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,15 +54,16 @@ namespace Login.NhanSu
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(83, 60);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 17);
+            this.label1.Size = new System.Drawing.Size(47, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ngày";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(158, 57);
+            this.textBox1.Location = new System.Drawing.Point(155, 60);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(116, 22);
             this.textBox1.TabIndex = 2;
@@ -68,15 +71,16 @@ namespace Login.NhanSu
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(394, 55);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(390, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 17);
+            this.label2.Size = new System.Drawing.Size(165, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhập số giờ làm việc";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(585, 55);
+            this.textBox2.Location = new System.Drawing.Point(584, 60);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(116, 22);
             this.textBox2.TabIndex = 2;
@@ -93,6 +97,8 @@ namespace Login.NhanSu
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
             this.button2.Location = new System.Drawing.Point(134, 387);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 31);
@@ -115,7 +121,7 @@ namespace Login.NhanSu
             this.Controls.Add(this.button1);
             this.Name = "DiemDanh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DiemDanh";
+            this.Text = "Điểm danh";
             this.Load += new System.EventHandler(this.DiemDanh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
