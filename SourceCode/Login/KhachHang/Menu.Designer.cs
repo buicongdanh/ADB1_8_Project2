@@ -50,12 +50,13 @@ namespace Login.KhachHang
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(232, 199);
+            this.button2.Location = new System.Drawing.Point(232, 208);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(300, 42);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Tìm kiếm hàng hóa";
+            this.button2.Text = "Xem hàng hóa";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 

@@ -9,20 +9,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Login.QuanLy
+namespace Login.KhachHang
 {
-    public partial class ThongKe_SLSP : Form
+    public partial class Xem_SP : Form
     {
-        private string MaQL;
         SqlConnection cnn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog = CUA_HANG_HOA;Integrated Security = True");
-        public ThongKe_SLSP()
+        public Xem_SP()
         {
-            InitializeComponent();
-        }
-
-        public ThongKe_SLSP(string MaQL)
-        {
-            this.MaQL = MaQL;
             InitializeComponent();
         }
 
@@ -31,7 +24,7 @@ namespace Login.QuanLy
             try
             {
                 cnn.Open();
-                string sql = $"EXCE thong_ke_so_luong @Ma_QL = {MaQL}";
+                string sql = $"select * from HANG_HOA";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -51,7 +44,33 @@ namespace Login.QuanLy
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
+            string MaHH = textBox1.Text.Trim();
+            if (MaHH == "")
+            {
+                MessageBox.Show("Không được để khoảng trống", "Warning");
+            }
+            else
+            {
+                try
+                {
+                    cnn.Open();
+                    string sql = $"select * from HANG_HOA WHERE Ma_PN = {MaHH}";
+                    SqlCommand com = new SqlCommand(sql, cnn);
+                    com.CommandType = CommandType.Text;
+                    SqlDataAdapter da = new SqlDataAdapter(com);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Warning");
+                }
+                finally
+                {
+                    cnn.Close();
+                }
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
