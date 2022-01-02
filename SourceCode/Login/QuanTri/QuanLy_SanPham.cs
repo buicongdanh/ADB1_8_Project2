@@ -12,16 +12,16 @@ namespace Login.QuanTri
 {
     public partial class QuanLy_SanPham : Form
     {
-        private string MaQL;
+        private string MaQT;
         SqlConnection cnn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog = CUA_HANG_HOA;Integrated Security = True");
         public QuanLy_SanPham()
         {
             InitializeComponent();
         }
-        public QuanLy_SanPham(string MaQL)
+        public QuanLy_SanPham(string MaQT)
         {
             InitializeComponent();
-            this.MaQL = MaQL;
+            this.MaQT = MaQT;
         }
         private void button2_Click(object sender, EventArgs e)
         {

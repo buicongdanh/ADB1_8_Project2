@@ -37,12 +37,18 @@ namespace Login.QuanTri
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form frmQT_QLSP = new QuanTri.QuanLy_SanPham(MaQT);
+            frmQT_QLSP.ShowDialog();
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form frmQT_XemTK = new QuanTri.Xem_Kho();
+            frmQT_XemTK.ShowDialog();
+            this.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -50,6 +56,14 @@ namespace Login.QuanTri
             this.Hide();
             Form frmQT_XemPN = new QuanTri.Xem_PhieuNhap(MaQT);
             frmQT_XemPN.ShowDialog();
+            this.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmQT_XemPX = new QuanTri.Xem_PhieuXuat(MaQT);
+            frmQT_XemPX.ShowDialog();
             this.Show();
         }
     }

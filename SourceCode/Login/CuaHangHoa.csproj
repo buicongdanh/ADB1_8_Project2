@@ -90,11 +90,23 @@
     <Compile Include="QuanTri\QuanLy_SanPham.Designer.cs">
       <DependentUpon>QuanLy_SanPham.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanTri\Xem_Kho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Xem_Kho.Designer.cs">
+      <DependentUpon>Xem_Kho.cs</DependentUpon>
+    </Compile>
     <Compile Include="QuanTri\Xem_PhieuNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="QuanTri\Xem_PhieuNhap.Designer.cs">
       <DependentUpon>Xem_PhieuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanTri\Xem_PhieuXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanTri\Xem_PhieuXuat.Designer.cs">
+      <DependentUpon>Xem_PhieuXuat.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -126,8 +138,14 @@
     <EmbeddedResource Include="QuanTri\QuanLy_SanPham.resx">
       <DependentUpon>QuanLy_SanPham.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\Xem_Kho.resx">
+      <DependentUpon>Xem_Kho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\Xem_PhieuNhap.resx">
       <DependentUpon>Xem_PhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanTri\Xem_PhieuXuat.resx">
+      <DependentUpon>Xem_PhieuXuat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
