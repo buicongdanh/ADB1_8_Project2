@@ -2,36 +2,36 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
-namespace Login.QuanLy
+using System.Data.SqlClient;
+namespace Login.NhanSu
 {
-    public partial class ThongKe_SLSP : Form
+    public partial class ThongKe_SLDH : Form
     {
-        private string MaQL;
+        private string MaNV;
         SqlConnection cnn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog = CUA_HANG_HOA;Integrated Security = True");
-        public ThongKe_SLSP()
+        public ThongKe_SLDH()
         {
             InitializeComponent();
         }
 
-        public ThongKe_SLSP(string MaQL)
+        public ThongKe_SLDH(string MaNV)
         {
-            this.MaQL = MaQL;
+            this.MaNV = MaNV;
             InitializeComponent();
         }
 
-        private void Xem_PhieuNhap_Load(object sender, EventArgs e)
+
+        private void ThongKe_SLDH_Load(object sender, EventArgs e)
         {
             try
             {
                 cnn.Open();
-                string sql = $"EXCE thong_ke_so_luong @Ma_QL = {MaQL}";
+                string sql = $"EXCE so_luong_don_hang @Ma_NV = {MaNV}";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -50,11 +50,6 @@ namespace Login.QuanLy
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

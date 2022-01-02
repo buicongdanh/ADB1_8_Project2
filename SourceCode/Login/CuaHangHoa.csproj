@@ -64,6 +64,12 @@
     <Compile Include="KhachHang\Xem_LichSuMuaHang.Designer.cs">
       <DependentUpon>Xem_LichSuMuaHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\Xem_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\Xem_SP.Designer.cs">
+      <DependentUpon>Xem_SP.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang\Xem_ThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="NhanSu\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\ThongKe_SLDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\ThongKe_SLDH.Designer.cs">
+      <DependentUpon>ThongKe_SLDH.cs</DependentUpon>
     </Compile>
     <Compile Include="NhanSu\Xem_LichSuLuong.cs">
       <SubType>Form</SubType>
@@ -101,6 +113,12 @@
     </Compile>
     <Compile Include="QuanLy\ThongKe_SLSP.Designer.cs">
       <DependentUpon>ThongKe_SLSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\Xem_HieuSuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\Xem_HieuSuat.Designer.cs">
+      <DependentUpon>Xem_HieuSuat.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\Menu.cs">
       <SubType>Form</SubType>
@@ -141,6 +159,9 @@
     <EmbeddedResource Include="KhachHang\Xem_LichSuMuaHang.resx">
       <DependentUpon>Xem_LichSuMuaHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\Xem_SP.resx">
+      <DependentUpon>Xem_SP.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\Xem_ThongTinCaNhan.resx">
       <DependentUpon>Xem_ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\ThongKe_SLDH.resx">
+      <DependentUpon>ThongKe_SLDH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\Xem_LichSuLuong.resx">
       <DependentUpon>Xem_LichSuLuong.cs</DependentUpon>
@@ -167,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLy\ThongKe_SLSP.resx">
       <DependentUpon>ThongKe_SLSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\Xem_HieuSuat.resx">
+      <DependentUpon>Xem_HieuSuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

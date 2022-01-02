@@ -39,5 +39,21 @@ namespace Login.QuanLy
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmQL_XHS = new QuanLy.Xem_HieuSuat(MaQL);
+            frmQL_XHS.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmQL_TKSP = new QuanLy.ThongKe_SLSP(MaQL);
+            frmQL_TKSP.ShowDialog();
+            this.Show();
+        }
     }
 }

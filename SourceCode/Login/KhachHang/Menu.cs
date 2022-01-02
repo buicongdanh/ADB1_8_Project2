@@ -52,5 +52,13 @@ namespace Login.KhachHang
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmKH_XemTT = new KhachHang.Xem_SP();
+            frmKH_XemTT.ShowDialog();
+            this.Show();
+        }
     }
 }
