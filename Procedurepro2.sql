@@ -94,17 +94,20 @@ BEGIN TRANSACTION
 	
 COMMIT TRANSACTION;
 GO
---Store procedure thống kê	 số lượng hàng
-CREATE PROC thong_ke_so_luong @ma_ql CHAR(10),@ma_shop CHAR(10)
+--Store procedure thống kê số lượng hàng
+CREATE PROC thong_ke_so_luong @ma_ql CHAR(10)
+
 AS
 BEGIN TRANSACTION
 
 	SELECT shsh.MA_SHOP,shsh.MA_SP,shsh.SO_LUONG
 	FROM SP_SHOP shsh,SHOP sh,QUAN_LI ql
-	WHERE sh.MA_SHOP=@ma_shop and shsh.MA_SHOP= sh.MA_SHOP and ql.MA_SHOP=sh.MA_SHOP and ql.MA_QL=@ma_ql;
+	WHERE ql.MA_SHOP = sh.MA_SHOP AND sh.MA_SHOP= ql.MA_SHOP and shsh.MA_SHOP= sh.MA_SHOP and ql.MA_SHOP=sh.MA_SHOP and ql.MA_QL=@ma_ql;
 	
 COMMIT TRANSACTION;
 GO
+
+
 --Store procedure nhân sự điểm danh:Thêm cột trong chi tiet ngay lam
 CREATE PROC nv_diem_danh @ma_nv CHAR(10),@ngaylv DATE,@sogio INT
 AS
@@ -153,6 +156,15 @@ BEGIN TRANSACTION
 COMMIT TRANSACTION;
 GO
 
+CREATE PROC xem_hieu_suat_nv @ma_ql CHAR(10)
+AS
+BEGIN TRANSACTION
+	SELECT nv.MA_NV, nv.HO_TEN_NV, ctnl.NGAY_LAM_VIEC, ctnl.SO_GIO
+	FROM dbo.NHAN_VIEN nv, dbo.CHI_TIET_NGAY_LAM ctnl
+	WHERE nv.Q_LI = @ma_ql AND nv.MA_NV = ctnl.MA_NV
+COMMIT TRANSACTION;
+GO
+
 CREATE PROCEDURE update_thong_tin_KH 
 @ma_kh CHAR(10), @HO_TEN_KH NVARCHAR(30), @DIA_CHI_KH NVARCHAR(30), @SO_DT_KH VARCHAR(10), @EMAIL_KH VARCHAR(30)
 AS
@@ -161,3 +173,4 @@ BEGIN TRANSACTION
 	SET HO_TEN_KH = @HO_TEN_KH, DIA_CHI_KH = @DIA_CHI_KH, SO_DT_KH = @SO_DT_KH, EMAIL_KH = @EMAIL_KH
 	WHERE MA_KH = @ma_kh;
 COMMIT TRANSACTION
+
