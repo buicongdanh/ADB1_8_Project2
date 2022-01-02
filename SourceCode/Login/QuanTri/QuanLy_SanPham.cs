@@ -33,7 +33,7 @@ namespace Login.QuanTri
             try
             {
                 cnn.Open();
-                string sql = $"select * from HANG_HOA";
+                string sql = $"select * from SAN_PHAM";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -69,7 +69,7 @@ namespace Login.QuanTri
                 try
                 {
                     cnn.Open();
-                    string sql = $"Select * From HANG_HOA where Ma_SP = {MaSP}";
+                    string sql = $"Select * From HANG_HOA where Ma_SP = '{MaSP}'";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);
@@ -126,7 +126,7 @@ namespace Login.QuanTri
                 }
                 finally
                 {
-                    string sql = $"select * from HANG_HOA";
+                    string sql = $"select * from SAN_PHAM";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);

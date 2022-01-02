@@ -202,6 +202,7 @@ namespace Login.KhachHang
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Xem_ThongTinCaNhan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem_ThongTinCaNhan";
             this.Load += new System.EventHandler(this.Xem_ThongTinCaNhan_Load);
             this.ResumeLayout(false);

@@ -31,7 +31,7 @@ namespace Login.NhanSu
             try
             {
                 cnn.Open();
-                string sql = $"EXCE so_luong_don_hang @Ma_NV = {MaNV}";
+                string sql = $"EXEC so_luong_don_hang @Ma_NV = '{MaNV}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);

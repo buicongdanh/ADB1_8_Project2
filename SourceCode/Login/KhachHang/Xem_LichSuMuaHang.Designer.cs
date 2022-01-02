@@ -73,6 +73,7 @@ namespace Login.KhachHang
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Xem_LichSuMuaHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem_LichSuMuaHang";
             this.Load += new System.EventHandler(this.Xem_PhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

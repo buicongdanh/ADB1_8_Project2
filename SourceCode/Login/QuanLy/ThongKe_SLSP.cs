@@ -31,7 +31,7 @@ namespace Login.QuanLy
             try
             {
                 cnn.Open();
-                string sql = $"EXCE thong_ke_so_luong @Ma_QL = {MaQL}";
+                string sql = $"EXEC thong_ke_so_luong @ma_ql = '{MaQL}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);

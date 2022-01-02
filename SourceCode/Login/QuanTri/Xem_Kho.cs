@@ -35,7 +35,7 @@ namespace Login.QuanTri
                 try
                 {
                     cnn.Open();
-                    string sql = $"select * from CHI_TIET_KHO WHERE Ma_KHO = {makho}";
+                    string sql = $"select * from CHI_TIET_KHO WHERE Ma_KHO = '{makho}'";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);

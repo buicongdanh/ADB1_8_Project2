@@ -36,20 +36,21 @@ namespace Login.QuanLy
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(115, 351);
+            this.button1.Location = new System.Drawing.Point(97, 360);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(100, 35);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 124);
+            this.dataGridView1.Location = new System.Drawing.Point(1, 124);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(798, 188);
             this.dataGridView1.TabIndex = 1;
             // 
             // Xem_HieuSuat
@@ -60,6 +61,7 @@ namespace Login.QuanLy
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "Xem_HieuSuat";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem_HieuSuat";
             this.Load += new System.EventHandler(this.Xem_HieuSuat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

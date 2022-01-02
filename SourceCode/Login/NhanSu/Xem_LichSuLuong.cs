@@ -36,7 +36,7 @@ namespace Login.NhanSu
             try
             {
                 cnn.Open();
-                string sql = $"select * from LICH_SU_LUONG WHERE Ma_NV = {MaNV}";
+                string sql = $"select * from LICH_SU_LUONG WHERE Ma_NV = '{MaNV}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);

@@ -28,7 +28,7 @@ namespace Login.QuanLy
             try
             {
                 cnn.Open();
-                string sql = $"EXCE xem_hieu_suat_nv @Ma_QL = {MaQL}";
+                string sql = $"EXEC xem_hieu_suat_nv @ma_ql = '{MaQL}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -44,6 +44,11 @@ namespace Login.QuanLy
             {
                 cnn.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

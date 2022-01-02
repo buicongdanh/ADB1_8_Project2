@@ -50,7 +50,10 @@ namespace Login.KhachHang
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            Form frmKH_XemLSMH = new KhachHang.Xem_LichSuMuaHang(MaKH);
+            frmKH_XemLSMH.ShowDialog();
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

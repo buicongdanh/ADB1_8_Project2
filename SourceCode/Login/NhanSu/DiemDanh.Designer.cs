@@ -114,6 +114,7 @@ namespace Login.NhanSu
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "DiemDanh";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DiemDanh";
             this.Load += new System.EventHandler(this.DiemDanh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
