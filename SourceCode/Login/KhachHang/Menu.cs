@@ -27,7 +27,6 @@ namespace Login.KhachHang
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            string sql = $"Select * From KHACH_HANG where MA_KH = {MaKH};";
 
         }
 
@@ -42,6 +41,16 @@ namespace Login.KhachHang
             Form frmKH_XemTT = new KhachHang.Xem_ThongTinCaNhan(MaKH);
             frmKH_XemTT.ShowDialog();
             this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
