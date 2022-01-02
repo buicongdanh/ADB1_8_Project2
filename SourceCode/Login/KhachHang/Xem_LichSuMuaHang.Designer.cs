@@ -47,9 +47,11 @@ namespace Login.KhachHang
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(109, 402);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(84, 404);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 36);
+            this.button2.Size = new System.Drawing.Size(95, 38);
             this.button2.TabIndex = 5;
             this.button2.Text = "Quay lại";
             this.button2.UseVisualStyleBackColor = true;
@@ -58,11 +60,13 @@ namespace Login.KhachHang
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(379, 35);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(226, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 17);
+            this.label2.Size = new System.Drawing.Size(439, 39);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Phiếu nhập";
+            this.label2.Text = "Lịch sử mua hàng của bạn";
             // 
             // Xem_LichSuMuaHang
             // 
@@ -74,7 +78,7 @@ namespace Login.KhachHang
             this.Controls.Add(this.dataGridView1);
             this.Name = "Xem_LichSuMuaHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Xem_LichSuMuaHang";
+            this.Text = "Lịch sử mua hàng";
             this.Load += new System.EventHandler(this.Xem_PhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

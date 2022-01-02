@@ -47,11 +47,11 @@ namespace Login.NhanSu
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 134);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 102);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(898, 251);
+            this.dataGridView1.Size = new System.Drawing.Size(898, 283);
             this.dataGridView1.TabIndex = 1;
             // 
             // Xem_DonHang
@@ -62,7 +62,7 @@ namespace Login.NhanSu
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Name = "Xem_DonHang";
-            this.Text = "Xem_DonHang";
+            this.Text = "Xem đơn hàng";
             this.Load += new System.EventHandler(this.Xem_DonHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

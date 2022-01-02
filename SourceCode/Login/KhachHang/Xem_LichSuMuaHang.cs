@@ -31,7 +31,7 @@ namespace Login.KhachHang
             try
             {
                 cnn.Open();
-                string sql = $"EXEC khach_hang_xem_lich_su_mua_hang @Ma_KH = {MaKH}";
+                string sql = $"EXEC khach_hang_xem_lich_su_mua_hang @Ma_KH = '{MaKH}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);

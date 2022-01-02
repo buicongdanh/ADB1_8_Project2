@@ -42,9 +42,11 @@ namespace Login.QuanTri
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(708, 294);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.OrangeRed;
+            this.button1.Location = new System.Drawing.Point(692, 325);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 32);
+            this.button1.Size = new System.Drawing.Size(106, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "Xem";
             this.button1.UseVisualStyleBackColor = true;
@@ -52,7 +54,7 @@ namespace Login.QuanTri
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(393, 299);
+            this.textBox1.Location = new System.Drawing.Point(392, 330);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 22);
             this.textBox1.TabIndex = 1;
@@ -60,7 +62,7 @@ namespace Login.QuanTri
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 92);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 123);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -70,7 +72,7 @@ namespace Login.QuanTri
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(4, 362);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 393);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
@@ -80,17 +82,20 @@ namespace Login.QuanTri
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(60, 302);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(59, 333);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 17);
+            this.label1.Size = new System.Drawing.Size(271, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Chọn mã phiếu xuất để xem chi tiết";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(101, 555);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(91, 585);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 36);
+            this.button2.Size = new System.Drawing.Size(110, 38);
             this.button2.TabIndex = 5;
             this.button2.Text = "Quay lại";
             this.button2.UseVisualStyleBackColor = true;
@@ -99,9 +104,11 @@ namespace Login.QuanTri
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 27);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(346, 29);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 17);
+            this.label2.Size = new System.Drawing.Size(188, 39);
             this.label2.TabIndex = 6;
             this.label2.Text = "Phiếu xuất";
             // 
@@ -109,7 +116,7 @@ namespace Login.QuanTri
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 635);
+            this.ClientSize = new System.Drawing.Size(879, 670);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);

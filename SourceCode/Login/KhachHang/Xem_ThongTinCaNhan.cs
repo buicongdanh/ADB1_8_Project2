@@ -92,6 +92,8 @@ namespace Login.KhachHang
             finally
             {
                 cnn.Close();
+                string result = $"Bạn đã chỉnh sửa thành công";
+                MessageBox.Show(result, "Thành công");
             }
         }
 

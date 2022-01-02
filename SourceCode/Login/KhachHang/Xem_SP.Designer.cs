@@ -40,7 +40,9 @@ namespace Login.KhachHang
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(695, 87);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.button1.Location = new System.Drawing.Point(693, 111);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 32);
             this.button1.TabIndex = 0;
@@ -50,15 +52,15 @@ namespace Login.KhachHang
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(396, 92);
+            this.textBox1.Location = new System.Drawing.Point(397, 117);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
+            this.textBox1.Size = new System.Drawing.Size(182, 22);
             this.textBox1.TabIndex = 1;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 138);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 185);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -68,15 +70,18 @@ namespace Login.KhachHang
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 95);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(36, 117);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 17);
+            this.label1.Size = new System.Drawing.Size(300, 20);
             this.label1.TabIndex = 4;
             this.label1.Text = "Chọn mã sản phẩm để xem chi tiết";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(103, 400);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(85, 471);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 36);
             this.button2.TabIndex = 5;
@@ -87,17 +92,19 @@ namespace Login.KhachHang
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(375, 26);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(233, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(100, 17);
+            this.label2.Size = new System.Drawing.Size(413, 39);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Xem hàng hóa";
+            this.label2.Text = "Xem sản phẩm của shop";
             // 
             // Xem_SP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 474);
+            this.ClientSize = new System.Drawing.Size(873, 532);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
@@ -106,7 +113,7 @@ namespace Login.KhachHang
             this.Controls.Add(this.button1);
             this.Name = "Xem_SP";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Xem_SP";
+            this.Text = "Xem sản phẩm";
             this.Load += new System.EventHandler(this.Xem_PhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

@@ -40,32 +40,35 @@ namespace Login.QuanTri
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(93, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 17);
+            this.label1.Size = new System.Drawing.Size(140, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập kho hàng";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(59, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 234);
+            this.dataGridView1.Size = new System.Drawing.Size(698, 234);
             this.dataGridView1.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(219, 57);
+            this.textBox1.Location = new System.Drawing.Point(257, 59);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(571, 57);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.DarkOrange;
+            this.button1.Location = new System.Drawing.Point(566, 54);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 27);
             this.button1.TabIndex = 3;
@@ -75,9 +78,11 @@ namespace Login.QuanTri
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(114, 387);
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Location = new System.Drawing.Point(97, 389);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(84, 31);
+            this.button2.Size = new System.Drawing.Size(93, 31);
             this.button2.TabIndex = 3;
             this.button2.Text = "Quay về";
             this.button2.UseVisualStyleBackColor = true;

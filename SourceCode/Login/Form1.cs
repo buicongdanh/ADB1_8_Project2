@@ -45,8 +45,8 @@ namespace Login
 
                 account_type = (string)com.Parameters["@loai_tk"].Value;
                 ma = (string)com.Parameters["@ma"].Value;
-                string result = $"Loại tài khoản: {account_type}, Mã = {ma}";
-                MessageBox.Show(result, "Kết quả");
+                string result = $"Bạn đã đăng nhập thành công";
+                MessageBox.Show(result, "Thành công");
                 
                 if(account_type == "KH")
                 {
@@ -79,7 +79,8 @@ namespace Login
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error");
+                string mess = "Đăng nhập không thành công, vui lòng kiểm tra thông tin";
+                MessageBox.Show(mess, "Error");
             }
             finally
             {
