@@ -46,12 +46,13 @@ namespace Login.QuanTri
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(272, 465);
+            this.button1.Location = new System.Drawing.Point(177, 465);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(115, 35);
             this.button1.TabIndex = 0;
@@ -183,7 +184,7 @@ namespace Login.QuanTri
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(74, 465);
+            this.button2.Location = new System.Drawing.Point(36, 465);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(115, 35);
             this.button2.TabIndex = 4;
@@ -191,11 +192,22 @@ namespace Login.QuanTri
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(321, 465);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 35);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "button3";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // QuanLy_SanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 578);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.textBox7);
@@ -242,5 +254,6 @@ namespace Login.QuanTri
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

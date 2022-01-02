@@ -62,13 +62,13 @@ namespace Login.KhachHang
         {
             var fullname = textBox4.Text;
             var email = textBox2.Text;
-            var sdt = textBox5.ToString();
+            string sdt = textBox5.Text.ToString();
             var diachi = textBox7.Text;
 
             try
             {
-                string sql = $"UPDATE KHACH_HANG" +
-                    $"SET HO_TEN_KH = '{fullname}', " +
+                string sql = $"UPDATE KHACH_HANG " +
+                    $"SET HO_TEN_KH = N'{fullname}', " +
                     $"DIA_CHI_KH = '{diachi}', " +
                     $"SO_DT_KH = '{sdt}', " +
                     $"EMAIL_KH = '{email}' Where MA_KH = '{MaKH}'";
