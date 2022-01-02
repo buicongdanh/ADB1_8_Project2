@@ -57,15 +57,24 @@ namespace Login
                 }
                 else if(account_type == "NV")
                 {
-
+                    Form formKhachHang = new NhanSu.Menu(ma);
+                    this.Hide();
+                    formKhachHang.ShowDialog();
+                    this.Close();
                 }
                 else if (account_type == "QL")
                 {
-
+                    Form formKhachHang = new QuanLy.Menu(ma);
+                    this.Hide();
+                    formKhachHang.ShowDialog();
+                    this.Close();
                 }
                 else if (account_type == "QT")
                 {
-
+                    Form formKhachHang = new QuanTri.Menu(ma);
+                    this.Hide();
+                    formKhachHang.ShowDialog();
+                    this.Close();
                 }
             }
             catch(Exception ex)

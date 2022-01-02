@@ -43,7 +43,7 @@ namespace Login.QuanLy
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(300, 42);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Xem thông tin cá nhân";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
@@ -52,7 +52,7 @@ namespace Login.QuanLy
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(300, 42);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Thống kê doanh thu";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
@@ -61,7 +61,7 @@ namespace Login.QuanLy
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(300, 42);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "Xem số lượng hàng";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // button4
@@ -70,18 +70,18 @@ namespace Login.QuanLy
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(300, 42);
             this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
+            this.button4.Text = "HIệu suất làm việc";
             this.button4.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(325, 28);
+            this.label1.Location = new System.Drawing.Point(310, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 39);
+            this.label1.Size = new System.Drawing.Size(130, 38);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "Quản lý";
             // 
             // button5
             // 
@@ -89,8 +89,9 @@ namespace Login.QuanLy
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(300, 42);
             this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
+            this.button5.Text = "Thoát";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Menu
             // 
@@ -105,6 +106,7 @@ namespace Login.QuanLy
             this.Controls.Add(this.button1);
             this.Name = "Menu";
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
