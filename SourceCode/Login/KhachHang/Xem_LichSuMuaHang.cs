@@ -2,41 +2,36 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
-namespace Login.NhanSu
+
+namespace Login.KhachHang
 {
-    public partial class Xem_LichSuLuong : Form
+    public partial class Xem_LichSuMuaHang : Form
     {
-        private string MaNV;
+        private string MaKH;
         SqlConnection cnn = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog = CUA_HANG_HOA;Integrated Security = True");
-
-        public Xem_LichSuLuong()
+        public Xem_LichSuMuaHang()
         {
             InitializeComponent();
         }
 
-        public Xem_LichSuLuong(string ma)
+        public Xem_LichSuMuaHang(string MaKH)
         {
+            this.MaKH = MaKH;
             InitializeComponent();
-            this.MaNV = ma;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Xem_LichSuLuong_Load(object sender, EventArgs e)
+        private void Xem_PhieuNhap_Load(object sender, EventArgs e)
         {
             try
             {
                 cnn.Open();
-                string sql = $"select * from LICH_SU_LUONG WHERE Ma_NV = {MaNV}";
+                string sql = $"EXEC khach_hang_xem_lich_su_mua_hang @Ma_KH = {MaKH}";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -52,6 +47,16 @@ namespace Login.NhanSu
             {
                 cnn.Close();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

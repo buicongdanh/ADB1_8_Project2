@@ -58,17 +58,35 @@
     <Compile Include="KhachHang\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="KhachHang\Xem_LichSuMuaHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KhachHang\Xem_LichSuMuaHang.Designer.cs">
+      <DependentUpon>Xem_LichSuMuaHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="KhachHang\Xem_ThongTinCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="KhachHang\Xem_ThongTinCaNhan.Designer.cs">
       <DependentUpon>Xem_ThongTinCaNhan.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\DiemDanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\DiemDanh.Designer.cs">
+      <DependentUpon>DiemDanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanSu\Menu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NhanSu\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NhanSu\Xem_LichSuLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\Xem_LichSuLuong.Designer.cs">
+      <DependentUpon>Xem_LichSuLuong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -77,6 +95,12 @@
     </Compile>
     <Compile Include="QuanLy\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QuanLy\ThongKe_SLSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLy\ThongKe_SLSP.Designer.cs">
+      <DependentUpon>ThongKe_SLSP.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanTri\Menu.cs">
       <SubType>Form</SubType>
@@ -114,11 +138,20 @@
     <EmbeddedResource Include="KhachHang\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="KhachHang\Xem_LichSuMuaHang.resx">
+      <DependentUpon>Xem_LichSuMuaHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KhachHang\Xem_ThongTinCaNhan.resx">
       <DependentUpon>Xem_ThongTinCaNhan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\DiemDanh.resx">
+      <DependentUpon>DiemDanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\Xem_LichSuLuong.resx">
+      <DependentUpon>Xem_LichSuLuong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -131,6 +164,9 @@
     </Compile>
     <EmbeddedResource Include="QuanLy\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLy\ThongKe_SLSP.resx">
+      <DependentUpon>ThongKe_SLSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="QuanTri\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>

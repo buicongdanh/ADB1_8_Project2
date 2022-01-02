@@ -12,20 +12,46 @@ namespace Login.NhanSu
 {
     public partial class Menu : Form
     {
-        private string ma;
+        private string MaNV;
 
         public Menu()
         {
             InitializeComponent();
         }
 
-        public Menu(string ma)
+        public Menu(string MaNV)
         {
-            this.ma = ma;
+            this.MaNV = MaNV;
             InitializeComponent();
         }
 
         private void Menu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmNV_DiemDanh = new NhanSu.DiemDanh(MaNV);
+            frmNV_DiemDanh.ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmNV_XemLSL = new NhanSu.Xem_LichSuLuong(MaNV);
+            frmNV_XemLSL.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
         {
 
         }
