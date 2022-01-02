@@ -94,16 +94,18 @@ BEGIN TRANSACTION
 COMMIT TRANSACTION;
 GO
 --Store procedure thống kê số lượng hàng
-CREATE PROC thong_ke_so_luong @ma_ql CHAR(10),@ma_shop CHAR(10)
+CREATE PROC thong_ke_so_luong @ma_ql CHAR(10)
 AS
 BEGIN TRANSACTION
 
 	SELECT shsh.MA_SHOP,shsh.MA_SP,shsh.SO_LUONG
 	FROM SP_SHOP shsh,SHOP sh,QUAN_LI ql
-	WHERE sh.MA_SHOP=@ma_shop and shsh.MA_SHOP= sh.MA_SHOP and ql.MA_SHOP=sh.MA_SHOP and ql.MA_QL=@ma_ql;
+	WHERE ql.MA_SHOP = sh.MA_SHOP AND sh.MA_SHOP= ql.MA_SHOP and shsh.MA_SHOP= sh.MA_SHOP and ql.MA_SHOP=sh.MA_SHOP and ql.MA_QL=@ma_ql;
 	
 COMMIT TRANSACTION;
 GO
+
+
 --Store procedure nhân sự điểm danh:Thêm cột trong chi tiet ngay lam
 CREATE PROC nv_diem_danh @ma_nv CHAR(10),@ngaylv DATE,@sogio INT
 AS
@@ -149,5 +151,13 @@ AS
 BEGIN TRANSACTION
 		INSERT INTO SAN_PHAM(MA_SP, TEN_SP, MO_TA_SP , GIA_SP, LOAI_HANG, SO_LUONG_TON, MUC_GIAM_GIA)
 		VALUES (@ma_sp, @ten_sp , @mo_ta, @gia, @loai, @so_luong_ton, @giam_gia);
+COMMIT TRANSACTION;
+GO
+CREATE PROC xem_hieu_suat_nv @ma_ql CHAR(10)
+AS
+BEGIN TRANSACTION
+	SELECT nv.MA_NV, nv.HO_TEN_NV, ctnl.NGAY_LAM_VIEC, ctnl.SO_GIO
+	FROM dbo.NHAN_VIEN nv, dbo.CHI_TIET_NGAY_LAM ctnl
+	WHERE nv.Q_LI = @ma_ql AND nv.MA_NV = ctnl.MA_NV
 COMMIT TRANSACTION;
 GO
