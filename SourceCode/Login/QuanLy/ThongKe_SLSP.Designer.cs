@@ -73,6 +73,7 @@ namespace Login.QuanLy
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ThongKe_SLSP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongKe_SLSP";
             this.Load += new System.EventHandler(this.Xem_PhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -34,7 +34,7 @@ namespace Login.NhanSu
             try
             {
                 cnn.Open();
-                string sql = $"select * from CHI_TIET_NGAY_LAM WHERE Ma_KHO = {MaNV}";
+                string sql = $"select * from CHI_TIET_NGAY_LAM WHERE MA_NV = '{MaNV}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -51,7 +51,7 @@ namespace Login.NhanSu
                 cnn.Close();
             }
 
-            textBox1.Text =  DateTime.Today.ToString();
+            textBox1.Text =  DateTime.Today.ToString("yyyy-MM-dd");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,9 +62,9 @@ namespace Login.NhanSu
             {
                 cnn.Open();
                 string sql = $"EXEC nv_diem_danh " +
-                            $"@Ma_NV = {MaNV}, " +
-                            $"@ngaylv = {date}, " +
-                            $"@SO_GIO = {time}, ";
+                            $"@Ma_NV = '{MaNV}', " +
+                            $"@ngaylv = '{date}', " +
+                            $"@sogio = {time}";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 SqlDataReader dr = com.ExecuteReader();
                 
@@ -72,10 +72,11 @@ namespace Login.NhanSu
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Caution");
+                cnn.Close();
             }
             finally
             {
-                string sql = $"select * from CHI_TIET_NGAY_LAM WHERE Ma_KHO = {MaNV}";
+                string sql = $"select * from CHI_TIET_NGAY_LAM WHERE MA_NV = '{MaNV}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);

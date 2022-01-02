@@ -24,7 +24,7 @@ namespace Login.KhachHang
             try
             {
                 cnn.Open();
-                string sql = $"select * from HANG_HOA";
+                string sql = $"select * from SAN_PHAM";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
@@ -54,7 +54,7 @@ namespace Login.KhachHang
                 try
                 {
                     cnn.Open();
-                    string sql = $"select * from HANG_HOA WHERE Ma_PN = {MaHH}";
+                    string sql = $"select * from SAN_PHAM WHERE Ma_PN = {MaHH}";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);

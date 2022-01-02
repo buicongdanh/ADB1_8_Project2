@@ -105,6 +105,7 @@ namespace Login.KhachHang
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Name = "Xem_SP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem_SP";
             this.Load += new System.EventHandler(this.Xem_PhieuNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

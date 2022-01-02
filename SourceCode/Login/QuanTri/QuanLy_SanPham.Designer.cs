@@ -214,6 +214,7 @@ namespace Login.QuanTri
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Name = "QuanLy_SanPham";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QuanLy_SanPham";
             this.Load += new System.EventHandler(this.QuanLy_SanPham_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

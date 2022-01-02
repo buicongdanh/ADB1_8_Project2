@@ -62,6 +62,7 @@ namespace Login.NhanSu
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Xem_LichSuLuong";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem_LichSuLuong";
             this.Load += new System.EventHandler(this.Xem_LichSuLuong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

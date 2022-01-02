@@ -85,6 +85,7 @@ namespace Login.QuanLy
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Name = "Menu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);

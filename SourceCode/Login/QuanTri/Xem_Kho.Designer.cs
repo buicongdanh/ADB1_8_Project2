@@ -94,6 +94,7 @@ namespace Login.QuanTri
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Xem_Kho";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xem_Kho";
             this.Load += new System.EventHandler(this.Xem_Kho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

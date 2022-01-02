@@ -73,6 +73,7 @@ namespace Login.NhanSu
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "ThongKe_SLDH";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ThongKe_SLDH";
             this.Load += new System.EventHandler(this.ThongKe_SLDH_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

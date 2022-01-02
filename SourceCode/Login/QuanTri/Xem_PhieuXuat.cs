@@ -31,7 +31,7 @@ namespace Login.QuanTri
             try
             {
                 cnn.Open();
-                string sql = $"select * from PHIEU_XUAT WHERE QT_PHUTRACH = {MaQT}";
+                string sql = $"select * from PHIEU_XUAT WHERE QT_PHUTRACH = '{MaQT}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;
                 SqlDataAdapter da = new SqlDataAdapter(com);
