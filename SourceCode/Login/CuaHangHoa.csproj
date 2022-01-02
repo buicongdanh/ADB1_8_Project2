@@ -94,6 +94,12 @@
     <Compile Include="NhanSu\ThongKe_SLDH.Designer.cs">
       <DependentUpon>ThongKe_SLDH.cs</DependentUpon>
     </Compile>
+    <Compile Include="NhanSu\Xem_DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NhanSu\Xem_DonHang.Designer.cs">
+      <DependentUpon>Xem_DonHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="NhanSu\Xem_LichSuLuong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\ThongKe_SLDH.resx">
       <DependentUpon>ThongKe_SLDH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NhanSu\Xem_DonHang.resx">
+      <DependentUpon>Xem_DonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NhanSu\Xem_LichSuLuong.resx">
       <DependentUpon>Xem_LichSuLuong.cs</DependentUpon>
