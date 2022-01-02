@@ -40,13 +40,11 @@ namespace Login.QuanTri
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                cnn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Caution");
-            }
-            finally
-            {
                 cnn.Close();
             }
         }
@@ -69,7 +67,7 @@ namespace Login.QuanTri
                 try
                 {
                     cnn.Open();
-                    string sql = $"Select * From HANG_HOA where Ma_SP = '{MaSP}'";
+                    string sql = $"Select * From SAN_PHAM where Ma_SP = '{MaSP}'";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);
@@ -82,19 +80,21 @@ namespace Login.QuanTri
                         {
                             string sql_2 =
                                 $"EXEC cap_nhat_san_pham " +
-                                $"@Ma_SP = {MaSP}, " +
-                                $"@ten_sp = {TenSP}, " +
-                                $"@mo_ta = {MoTa}, " +
+                                $"@Ma_SP = '{MaSP}', " +
+                                $"@ten_sp = '{TenSP}', " +
+                                $"@mo_ta = '{MoTa}', " +
                                 $"@gia = {Gia}, " +
-                                $"@loai = {LoaiHang}, " +
+                                $"@loai = '{LoaiHang}', " +
                                 $"@so_luong_ton = {SLT}, " +
                                 $"@giam_gia = {GiamGia}";
                             com = new SqlCommand(sql_2, cnn);
                             SqlDataReader dr = com.ExecuteReader();
+                            cnn.Close();
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message, "Caution");
+                            cnn.Close();
                         }
                     }
                     //Không có dữ liệu => Thêm
@@ -104,29 +104,33 @@ namespace Login.QuanTri
                         {
                             string sql_2 =
                                 $"EXEC them_san_pham " +
-                                $"@Ma_SP = {MaSP}, " +
-                                $"@ten_sp = {TenSP}, " +
-                                $"@mo_ta = {MoTa}, " +
+                                $"@Ma_SP = '{MaSP}', " +
+                                $"@ten_sp = '{TenSP}', " +
+                                $"@mo_ta = '{MoTa}', " +
                                 $"@gia = {Gia}, " +
-                                $"@loai = {LoaiHang}, " +
+                                $"@loai = '{LoaiHang}', " +
                                 $"@so_luong_ton = {SLT}, " +
                                 $"@giam_gia = {GiamGia}";
                             com = new SqlCommand(sql_2, cnn);
                             SqlDataReader dr = com.ExecuteReader();
+                            cnn.Close();
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message, "Caution");
+                            cnn.Close();
                         }
                     }    
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message, "Caution");
+                    cnn.Close();
                 }
                 finally
                 {
-                    string sql = $"select * from SAN_PHAM";
+                    cnn.Open();
+                    string sql = $"select * from SAN_PHAM WHERE Ma_SP = '{MaSP}'";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);
@@ -136,6 +140,19 @@ namespace Login.QuanTri
                     cnn.Close();
                 }
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cnn.Open();
+            string sql = $"select * from SAN_PHAM";
+            SqlCommand com = new SqlCommand(sql, cnn);
+            com.CommandType = CommandType.Text;
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            cnn.Close();
         }
     }
 }

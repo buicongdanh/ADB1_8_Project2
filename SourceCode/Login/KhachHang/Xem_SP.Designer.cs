@@ -70,9 +70,9 @@ namespace Login.KhachHang
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(69, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 17);
+            this.label1.Size = new System.Drawing.Size(224, 17);
             this.label1.TabIndex = 4;
-            this.label1.Text = "Chọn mã phiếu nhập để xem chi tiết";
+            this.label1.Text = "Chọn mã sản phẩm để xem chi tiết";
             // 
             // button2
             // 

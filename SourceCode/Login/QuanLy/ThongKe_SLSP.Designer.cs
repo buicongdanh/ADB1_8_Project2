@@ -38,16 +38,16 @@ namespace Login.QuanLy
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(2, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(93, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(875, 228);
+            this.dataGridView1.Size = new System.Drawing.Size(510, 322);
             this.dataGridView1.TabIndex = 2;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(105, 396);
+            this.button2.Location = new System.Drawing.Point(93, 479);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 36);
             this.button2.TabIndex = 5;
@@ -58,7 +58,7 @@ namespace Login.QuanLy
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(408, 28);
+            this.label2.Location = new System.Drawing.Point(309, 37);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 17);
             this.label2.TabIndex = 6;
@@ -68,7 +68,7 @@ namespace Login.QuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 475);
+            this.ClientSize = new System.Drawing.Size(696, 542);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);

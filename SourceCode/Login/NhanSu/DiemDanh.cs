@@ -41,6 +41,7 @@ namespace Login.NhanSu
                 DataTable dt = new DataTable();
                 da.Fill(dt);
                 dataGridView1.DataSource = dt;
+                cnn.Close();
             }
             catch (Exception ex)
             {
@@ -50,7 +51,6 @@ namespace Login.NhanSu
             {
                 cnn.Close();
             }
-
             textBox1.Text =  DateTime.Today.ToString("yyyy-MM-dd");
         }
 
@@ -67,15 +67,16 @@ namespace Login.NhanSu
                             $"@sogio = {time}";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 SqlDataReader dr = com.ExecuteReader();
-                
+                cnn.Close();
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Caution");
-                cnn.Close();
             }
             finally
             {
+                cnn.Open();
                 string sql = $"select * from CHI_TIET_NGAY_LAM WHERE MA_NV = '{MaNV}'";
                 SqlCommand com = new SqlCommand(sql, cnn);
                 com.CommandType = CommandType.Text;

@@ -61,7 +61,7 @@ namespace Login.QuanTri
                 try
                 {
                     cnn.Open();
-                    string sql = $"select * from CT_PHIEU_XUAT WHERE Ma_PN = {mapx}";
+                    string sql = $"select * from CT_PHIEU_XUAT WHERE Ma_PX = '{mapx}'";
                     SqlCommand com = new SqlCommand(sql, cnn);
                     com.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(com);
