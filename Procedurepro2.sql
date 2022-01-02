@@ -20,6 +20,7 @@ BEGIN TRANSACTION
 	WHERE lsmh.MA_KH = @ma_kh and lsmh.MA_DH=dh.MA_DH;
 COMMIT TRANSACTION;
 GO
+
 --Store procedure để quản trị cập nhật sản phẩm
 --Procedure cập nhật sản phẩm
 CREATE PROCEDURE cap_nhat_san_pham @ma_sp CHAR(10), @ten_sp NVARCHAR(20), @mo_ta NVARCHAR(30), @gia INT, @loai CHAR(10),@so_luong_ton INT,@giam_gia FLOAT
@@ -95,6 +96,7 @@ COMMIT TRANSACTION;
 GO
 --Store procedure thống kê số lượng hàng
 CREATE PROC thong_ke_so_luong @ma_ql CHAR(10)
+
 AS
 BEGIN TRANSACTION
 
@@ -153,6 +155,7 @@ BEGIN TRANSACTION
 		VALUES (@ma_sp, @ten_sp , @mo_ta, @gia, @loai, @so_luong_ton, @giam_gia);
 COMMIT TRANSACTION;
 GO
+
 CREATE PROC xem_hieu_suat_nv @ma_ql CHAR(10)
 AS
 BEGIN TRANSACTION
@@ -161,3 +164,13 @@ BEGIN TRANSACTION
 	WHERE nv.Q_LI = @ma_ql AND nv.MA_NV = ctnl.MA_NV
 COMMIT TRANSACTION;
 GO
+
+CREATE PROCEDURE update_thong_tin_KH 
+@ma_kh CHAR(10), @HO_TEN_KH NVARCHAR(30), @DIA_CHI_KH NVARCHAR(30), @SO_DT_KH VARCHAR(10), @EMAIL_KH VARCHAR(30)
+AS
+BEGIN TRANSACTION
+	UPDATE dbo.KHACH_HANG
+	SET HO_TEN_KH = @HO_TEN_KH, DIA_CHI_KH = @DIA_CHI_KH, SO_DT_KH = @SO_DT_KH, EMAIL_KH = @EMAIL_KH
+	WHERE MA_KH = @ma_kh;
+COMMIT TRANSACTION
+
