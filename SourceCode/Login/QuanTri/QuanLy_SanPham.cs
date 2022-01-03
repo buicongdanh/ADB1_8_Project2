@@ -63,7 +63,7 @@ namespace Login.QuanTri
                 int Gia = int.Parse(textBox4.Text);
                 string LoaiHang = textBox5.Text.Trim();
                 int SLT = int.Parse(textBox6.Text);
-                float GiamGia = float.Parse(textBox4.Text);
+                float GiamGia = float.Parse(textBox7.Text);
                 try
                 {
                     cnn.Open();

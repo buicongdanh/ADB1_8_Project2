@@ -55,7 +55,7 @@ namespace Login.KhachHang
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
